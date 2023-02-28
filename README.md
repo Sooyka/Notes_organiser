@@ -13,7 +13,7 @@ This is a bash script that takes current time and makes a file of that name. It 
 
 It on default opens gedit to edit this file, but it can take two arguments "file_name" and "editor":
 
-        Notatki file_name editor
+        Notatki editor file_name 
         
 And then it will make a file [date]_file_name 
 
