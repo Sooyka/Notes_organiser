@@ -14,7 +14,7 @@
         installPhase = 
         ''
           mkdir -p $out/bin 
-          install -t $out/bin Notatnik 
+          install -t $out/bin Notatnik.sh 
         '';
       };
    };
