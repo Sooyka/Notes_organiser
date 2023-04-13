@@ -1,4 +1,26 @@
 
+cd ~ || exit
+
+notatki_folder_is_missing=1
+
+if [ "$(ls -A .)" ]
+then
+	for dir in ./*/
+	do
+		dir=${dir%*/}
+		subdirectory=${dir##*/}
+		if [ "$subdirectory" = "Notatki" ]
+		then
+			notatki_folder_is_missing=0
+		fi
+	done
+fi
+
+if [ $notatki_folder_is_missing -eq 1 ]
+then
+	mkdir "Notatki"
+fi
+
 cd ~/Notatki || exit
 
 current_date=$(date +"%Y_%m_%b_%d_%A_%H_%M_%S") 
